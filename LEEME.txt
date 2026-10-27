@@ -1,14 +1,14 @@
 MI HOGAR 360 — PRESUPUESTO FAMILIAR Y ASIGNACIÓN POR HIJO
 
 FLUJO
-1. En “Agregar registro de hijos” registra nombre, edad y parentesco.
+1. En “Integrantes familiares” registra nombre, edad y parentesco.
 2. En “Asignar presupuesto”, define el presupuesto total familiar del mes.
 3. Asigna una parte de ese presupuesto a cada hijo registrado.
 4. Registra por separado los gastos de cada hijo y los gastos familiares.
 5. La app muestra el disponible familiar y el disponible/ahorro de cada hijo.
 
 REGLAS DE CÁLCULO
-- Disponible familiar = presupuesto total familiar − total asignado a hijos − gastos familiares.
+- Disponible familiar = presupuesto total familiar − total asignado a integrantes familiares − gastos familiares.
 - Disponible del hijo = presupuesto asignado a ese hijo − gastos registrados para ese hijo.
 - Los gastos del hijo NO se vuelven a restar del presupuesto familiar, porque el dinero ya fue apartado al asignar su presupuesto.
 - El ahorro acumulado por hijo suma el sobrante de sus meses registrados. Si un mes gasta más de lo asignado, ese resultado negativo también afecta el acumulado.
