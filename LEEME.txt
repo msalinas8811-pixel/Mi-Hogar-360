@@ -1,24 +1,30 @@
-MI HOGAR 360 — REGISTRO DE HIJOS Y PRESUPUESTO
+MI HOGAR 360 — PRESUPUESTO FAMILIAR Y ASIGNACIÓN POR HIJO
 
-Esta es una versión de prueba local enfocada en el flujo solicitado:
-1. Panel independiente “Registrar hijos”, con nombre y edad.
-2. Los hijos guardados aparecen automáticamente en “Asignar presupuesto”.
-3. Asignación de presupuesto por hijo y por mes.
-4. Registro de gastos por hijo, con fecha y descripción.
-5. Ahorro mensual = presupuesto asignado - gastos del mes.
-6. Ahorro acumulado = suma de los saldos mensuales, de modo que el sobrante de un mes se conserva en los siguientes.
-7. Historial por mes y listado de gastos; editar/eliminar perfil; eliminar un gasto recalcula el saldo.
-8. Datos guardados en localStorage del navegador y descarga de respaldo JSON.
+FLUJO
+1. En “Agregar registro de hijos” registra nombre, edad y parentesco.
+2. En “Asignar presupuesto”, define el presupuesto total familiar del mes.
+3. Asigna una parte de ese presupuesto a cada hijo registrado.
+4. Registra por separado los gastos de cada hijo y los gastos familiares.
+5. La app muestra el disponible familiar y el disponible/ahorro de cada hijo.
+
+REGLAS DE CÁLCULO
+- Disponible familiar = presupuesto total familiar − total asignado a hijos − gastos familiares.
+- Disponible del hijo = presupuesto asignado a ese hijo − gastos registrados para ese hijo.
+- Los gastos del hijo NO se vuelven a restar del presupuesto familiar, porque el dinero ya fue apartado al asignar su presupuesto.
+- El ahorro acumulado por hijo suma el sobrante de sus meses registrados. Si un mes gasta más de lo asignado, ese resultado negativo también afecta el acumulado.
+- Las cantidades se calculan en centavos para evitar errores comunes de decimales.
 
 CÓMO ABRIR
-- Extrae la carpeta del ZIP.
+- Descomprime el ZIP en una carpeta nueva.
 - Abre index.html en Chrome o Edge.
-- Entra en Registrar hijos y agrega nombre y edad.
-- Abre Asignar presupuesto, selecciona el hijo, el mes y el presupuesto.
-- Registra los gastos. El ahorro se calcula automáticamente.
+- Esta es una prueba local; no reemplaza el proyecto publicado ni sincroniza datos entre dispositivos.
+- Los datos se guardan en localStorage de este navegador. Usa “Descargar respaldo” periódicamente.
 
-IMPORTANTE
-- Esta versión enfocada no reemplaza automáticamente otras versiones/proyectos de Mi Hogar 360.
-- Los datos se guardan en el navegador/dispositivo donde se usa esta versión. No hay sincronización en nube ni inicio de sesión.
-- Si abres el archivo en otro navegador o dispositivo, los datos locales no se transfieren; usa el respaldo como copia de seguridad. La importación de respaldo no está incluida en esta versión.
-- Verificaciones realizadas antes de entregar: sintaxis JavaScript con Node.js y prueba de integridad del ZIP. No se afirma una prueba visual completa en navegador real.
+VALIDACIÓN REALIZADA
+- Sintaxis de JavaScript validada con Node.js.
+- ZIP comprobado con unzip -t.
+- No se afirma prueba visual en navegador real.
+
+
+AHORRO DEL HIJO
+El ahorro mensual se calcula como presupuesto asignado menos gastos personales registrados. Si queda saldo positivo, se acumula con el ahorro de meses anteriores. Ejemplo: asignación $100 - gastos $65 = $35 de ahorro del mes; si el mes siguiente ahorra $20 más, el acumulado será $55. Los gastos familiares se descuentan del presupuesto familiar y no vuelven a descontarse del ahorro individual.
