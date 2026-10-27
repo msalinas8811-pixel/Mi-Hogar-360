@@ -1,27 +1,18 @@
-MI HOGAR 360 — VERSIÓN 1.2
+MI HOGAR 360 v1.3 — REDISEÑO APLICADO
 
-Incluye: Inicio, calendario, presupuesto, gastos por integrante, metas de ahorro, tareas/eventos familiares, informes por categoría e integrante, comparación de 6 meses, exportación CSV compatible con Excel, respaldo/restauración JSON y conexión opcional de sincronización Supabase.
+Esta versión parte del proyecto original v1.2. Conserva los módulos y la lógica existentes y renueva el panel de inicio con:
+- navegación lateral oscura en escritorio y navegación inferior en móvil
+- resumen financiero con datos locales reales
+- gráficos de ingresos/gastos de los últimos seis meses
+- distribución de gastos por categorías
+- accesos a calendario, eventos, tareas, familia, ahorro y pagos
+- notas rápidas guardadas localmente
+- nueva clave de caché para que la PWA solicite los archivos actualizados
 
-PRUEBA LOCAL
-1. Descomprime el ZIP.
-2. Abre index.html para una revisión visual básica. Algunas funciones PWA y el acceso a Supabase requieren publicar la carpeta bajo HTTPS.
-3. Los datos locales se guardan en el navegador del dispositivo. Conserva respaldos JSON.
+PRUEBAS:
+- La sintaxis JavaScript debe validarse antes de publicar.
+- Prueba en navegador y teléfono: movimientos, pagos, tareas, calendario, metas, exportación/importación y sincronización Supabase.
+- La versión no debe publicarse sobre la rama principal hasta completar estas pruebas.
+- No se migran ni borran claves de almacenamiento local.
 
-CONFIGURAR SINCRONIZACIÓN ENTRE TELÉFONOS
-1. Crea un proyecto en Supabase.
-2. En SQL Editor ejecuta todo el archivo supabase_schema.sql.
-3. En Authentication configura los métodos de correo y las URLs de redirección apropiadas para el sitio publicado.
-4. Publica los archivos de esta carpeta en un hosting HTTPS.
-5. En Ajustes pega la URL del proyecto y la clave pública anon/publishable. No uses service_role ni claves secretas en la app.
-6. Crea una cuenta e inicia sesión. Pulsa “Crear hogar y subir datos”.
-7. Agrega perfiles familiares y genera una invitación para cada uno. El código se copia al portapapeles; cada integrante crea su propia cuenta e introduce el código.
-
-SEGURIDAD / ALCANCE
-- Las cuentas familiares usan Supabase Auth. El SQL restringe la escritura de miembros: pueden marcar tareas existentes como completadas y agregar gastos si tienen permiso; no pueden modificar las demás secciones. El administrador conserva acceso completo.
-- El código de invitación es de un solo uso y caduca a los 7 días. Los perfiles miembros ven Inicio, Calendario, Presupuesto y Familia; la interfaz limita la edición a gastos nuevos autorizados y marcar tareas completadas. El servidor también valida estos cambios.
-- La app todavía no cobra suscripciones ni verifica pagos. El modo gratuito/Premium está planificado, pero antes de vender Premium hay que definir el proveedor de pagos y la validación del plan en servidor.
-- La sincronización requiere conexión a internet. El almacenamiento local sigue disponible, pero las ediciones sin conexión de miembros pueden no sincronizarse si chocan con las restricciones de permisos.
-- La clave pública de Supabase puede estar en el cliente; nunca incluyas claves secretas/service_role.
-
-
-Versión 1.3: renovación visual del panel de inicio, tarjetas, gráficos mensuales derivados de los datos locales, sección familiar, tareas y eventos. Se conserva el esquema de almacenamiento local y la lógica original.
+Para probar localmente, sirve la carpeta con un servidor HTTP local. Algunas funciones de PWA/service worker no funcionan al abrir index.html mediante file://.

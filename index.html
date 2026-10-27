@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#071d40">
+<meta name="theme-color" content="#09234a">
 <meta name="description" content="Organiza finanzas, ahorro, tareas y calendario familiar en Mi Hogar 360.">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <link rel="manifest" href="manifest.webmanifest">
@@ -13,83 +13,120 @@
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.45 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{max-width:1200px;margin:auto;min-height:100vh}.top{background:linear-gradient(120deg,var(--navy),var(--navy2));color:white;padding:20px 22px 24px;border-radius:0 0 24px 24px}.toprow{display:flex;align-items:center;justify-content:space-between;gap:12px}.brand{display:flex;align-items:center;gap:11px}.logo{width:43px;height:43px;border-radius:14px;background:var(--teal);display:grid;place-items:center;font-weight:900;font-size:18px;color:var(--navy)}h1{font-size:21px;margin:0;letter-spacing:-.5px} .sub{color:#d3e4ee;font-size:12px}.top .sub{margin-top:3px}.pill{border:1px solid #ffffff44;border-radius:99px;padding:7px 10px;font-size:12px;color:#eaf7fb}.layout{display:grid;grid-template-columns:220px 1fr;gap:22px;padding:22px}.side{display:flex;flex-direction:column;gap:7px}.nav{border:0;background:transparent;text-align:left;padding:12px 13px;border-radius:12px;color:#506477;display:flex;gap:10px;align-items:center;font-weight:650}.nav.active,.nav:hover{background:#e1f6f2;color:#087d72}.nav .ico{width:22px;text-align:center;font-size:17px}.main{min-width:0}.pagehead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin:3px 0 17px}.pagehead h2{font-size:24px;letter-spacing:-.7px;margin:0}.muted{color:var(--muted)}.small{font-size:12px}.btn{border:0;border-radius:11px;padding:10px 14px;font-weight:700;background:var(--navy);color:white}.btn.teal{background:var(--teal);color:#083d3a}.btn.light{background:#e8f0f5;color:var(--navy)}.btn.danger{background:#ffebed;color:#a52d38}.btn:disabled{opacity:.5;cursor:not-allowed}.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px}.card,.panel{background:var(--white);border:1px solid var(--line);border-radius:17px;padding:17px;box-shadow:var(--shadow)}.statlabel{color:var(--muted);font-size:12px;font-weight:650}.stat{font-size:24px;font-weight:800;letter-spacing:-.7px;margin:6px 0}.statnote{font-size:11px;color:var(--muted)}.staticon{float:right;background:var(--teal2);width:32px;height:32px;display:grid;place-items:center;border-radius:10px}.section{margin-top:18px}.sectiontitle{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.sectiontitle h3{margin:0;font-size:16px}.two{display:grid;grid-template-columns:1.15fr .85fr;gap:15px}.list{display:flex;flex-direction:column;gap:0}.item{padding:12px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:11px}.item:last-child{border-bottom:0}.dot{width:39px;height:39px;display:grid;place-items:center;border-radius:12px;background:#eef5f8;flex-shrink:0;font-size:17px}.itembody{flex:1;min-width:0}.itembody strong{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.itembody small{color:var(--muted)}.amount{font-weight:750;white-space:nowrap}.badge{font-size:11px;border-radius:99px;padding:4px 8px;background:#edf2f5;color:#5b6e7e;white-space:nowrap}.badge.red{background:#ffebed;color:#a52d38}.badge.green{background:#ddf7ec;color:#117454}.badge.amber{background:#fff3d8;color:#8a5c11}.empty{text-align:center;padding:28px 12px;color:var(--muted)}.empty b{display:block;color:var(--ink);margin-bottom:4px}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-size:12px;font-weight:700;color:#536678}.field input,.field select,.field textarea{border:1px solid #d6e1e8;border-radius:10px;padding:11px 12px;background:white;color:var(--ink);width:100%;min-width:0}.field textarea{min-height:76px;resize:vertical}.actions{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap;margin-top:15px}.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center}.toolbar input,.toolbar select{padding:9px 10px;border:1px solid var(--line);border-radius:10px;background:white}.progress{height:8px;background:#e9f0f3;border-radius:99px;overflow:hidden;margin:10px 0}.progress span{display:block;height:100%;background:var(--teal);border-radius:99px}.goal{padding:13px 0;border-bottom:1px solid var(--line)}.goal:last-child{border:0}.goalrow{display:flex;justify-content:space-between;gap:10px}.calendarhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px}.calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px}.dayname{text-align:center;color:var(--muted);font-size:11px;padding:7px 0}.day{min-height:68px;border:1px solid var(--line);background:white;border-radius:10px;padding:7px;font-size:12px}.day.today{border:2px solid var(--teal)}.day.dim{opacity:.4}.daynum{font-weight:700}.daymarks{margin-top:5px;display:flex;gap:3px;flex-wrap:wrap}.mark{width:6px;height:6px;border-radius:50%;background:var(--teal)}.mark.red{background:var(--red)}.mark.blue{background:#5287d8}.bottomnav{display:none}.hidden{display:none!important}.notice{padding:11px 13px;background:#e7f7f4;color:#12675f;border-radius:12px;font-size:13px;margin-bottom:13px}.warning{padding:11px 13px;background:#fff3d8;color:#805a12;border-radius:12px;font-size:13px;margin-bottom:13px}.modalback{position:fixed;inset:0;background:#102b4666;display:grid;place-items:center;padding:15px;z-index:10}.modal{background:white;border-radius:19px;padding:21px;width:min(560px,100%);max-height:90vh;overflow:auto;box-shadow:0 20px 70px #0003}.modalhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:17px}.modalhead h3{margin:0}.close{border:0;background:#edf3f6;border-radius:9px;width:34px;height:34px;font-size:20px}.footer{text-align:center;color:#91a0ac;font-size:11px;padding:15px 10px 90px}.check{width:18px;height:18px;accent-color:var(--teal)}.rowwrap{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 @media(max-width:850px){.layout{grid-template-columns:1fr;padding:16px 13px 90px}.side{display:none}.cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.two{grid-template-columns:1fr}.top{padding:17px 16px 22px}.toprow{align-items:flex-start}.pagehead h2{font-size:21px}.card,.panel{padding:14px}.stat{font-size:21px}.bottomnav{position:fixed;display:flex;bottom:0;left:0;right:0;background:#ffffffef;backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:8px 4px calc(8px + env(safe-area-inset-bottom));z-index:5;justify-content:space-around}.bottomnav button{border:0;background:transparent;color:#687a89;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;padding:5px 3px;min-width:0}.bottomnav button.active{color:#078477;font-weight:800}.bottomnav .ico{font-size:18px}.day{min-height:52px;padding:4px;font-size:11px}.dayname{font-size:10px}.calendar{gap:3px}.pill{font-size:10px}.formgrid{grid-template-columns:1fr}.field.full{grid-column:auto}.pagehead{align-items:flex-start}.pagehead .btn{padding:9px 10px}.footer{padding-bottom:100px}}
 
-/* Mi Hogar 360 v1.3 — rediseño visual integral */
-:root{--navy:#071d40;--navy2:#0c2b57;--teal:#0bb981;--teal2:#e1f8ed;--bg:#f3f6fb;--ink:#10213f;--muted:#71809a;--line:#e6ebf3;--shadow:0 5px 22px rgba(20,43,80,.055)}
-body{background:#f3f6fb;color:var(--ink);font-size:14px}
-.app{max-width:1600px;min-height:100vh;padding-bottom:20px}
-.top{background:linear-gradient(120deg,#061b3b,#0c2b57);padding:18px 24px;border-radius:0;min-height:90px;box-shadow:0 5px 18px #061b3b18}
-.toprow{max-width:1540px;margin:auto}
-.logo{width:48px;height:48px;background:linear-gradient(145deg,#16d49a,#08a978);color:#fff;border-radius:15px;box-shadow:0 7px 18px #0bb98135}
-h1{font-size:23px;letter-spacing:-.7px}.top .sub{color:#c5d4e9;font-size:12px}
-.pill{background:#ffffff12;border-color:#ffffff25;padding:9px 14px}
-.layout{grid-template-columns:232px minmax(0,1fr);gap:22px;padding:22px 24px}
-.side{background:linear-gradient(180deg,#071d40,#09264d);border-radius:20px;padding:14px 11px;align-self:stretch;min-height:calc(100vh - 155px);gap:5px;box-shadow:0 10px 30px #071d4010}
-.nav{color:#c2d0e4;padding:13px 14px;border-radius:12px;font-size:14px;transition:background .18s,color .18s,transform .18s}
-.nav.active,.nav:hover{background:linear-gradient(90deg,#1475f8,#0962db);color:white;box-shadow:0 6px 16px #075edb30}
-.nav .ico{font-size:19px}
-.main{min-width:0}
-.pagehead{margin:3px 0 18px;align-items:center}
-.pagehead h2{font-size:27px;letter-spacing:-.9px;color:#10213f}
-.pagehead .muted{font-size:13px;margin-top:3px}
-.btn{border-radius:12px;padding:11px 15px;box-shadow:none;transition:transform .16s,box-shadow .16s}
-.btn:hover{transform:translateY(-1px);box-shadow:0 5px 14px #10213f12}
-.btn.teal{background:#0bb981;color:#fff}
-.btn.light{background:#f1f5fb;color:#24436d;border:1px solid #e4ebf5}
-.cards{gap:13px}
-.card,.panel{border:1px solid #e7edf5;border-radius:18px;padding:19px;box-shadow:0 5px 22px rgba(20,43,80,.045)}
-.statlabel{font-size:12px;color:#657691}.stat{font-size:26px;color:#10213f}.staticon{background:#e1f8ed;color:#087e59}
-.section{margin-top:18px}.sectiontitle{margin-bottom:14px}.sectiontitle h3{font-size:17px;letter-spacing:-.35px;color:#10213f}
-.item{padding:13px 0;border-color:#edf1f7}.dot{background:#f0f5fc;color:#25518b}
-.badge{border-radius:8px;background:#eff4fb;color:#506581;padding:5px 9px}
-.bottomnav{border-radius:16px 16px 0 0;box-shadow:0 -5px 24px #10213f0d}
-.footer{color:#8794a8;padding:16px}
-.welcome-strip{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:25px 28px;margin:0 0 15px;border-radius:18px;color:#fff;background:linear-gradient(100deg,#071d40f5,#123965e8),linear-gradient(120deg,#123965,#071d40);position:relative;overflow:hidden;min-height:132px}
-.welcome-strip:after{content:"";position:absolute;width:230px;height:230px;border:1px solid #ffffff1c;border-radius:50%;right:110px;top:-120px;box-shadow:0 0 0 28px #ffffff08,0 0 0 58px #ffffff06}
-.eyebrow{font-size:10px;letter-spacing:1.7px;color:#8fe9cc;font-weight:800}
-.welcome-strip h3{font-size:25px;letter-spacing:-.8px;margin:8px 0 4px}.welcome-strip p{margin:0;color:#d2deee}
-.welcome-date{z-index:1;min-width:105px;text-align:center;border-left:1px solid #ffffff30;padding-left:22px;display:flex;flex-direction:column;color:#d7e4f6;text-transform:capitalize;font-size:12px}
-.welcome-date strong{font-size:43px;line-height:1.1;color:#fff}
-.dash-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-bottom:15px}
-.dash-stat{display:flex;align-items:center;gap:13px;padding:17px 16px;border:1px solid #e5ebf4;border-radius:17px;background:#fff;min-width:0;box-shadow:0 5px 20px #10213f06}
-.dash-stat-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;font-size:24px;font-weight:800;flex-shrink:0}
-.dash-stat span{display:block;font-size:11px;color:#63738e;margin-bottom:4px}
-.dash-stat strong{display:block;font-size:23px;letter-spacing:-.8px;line-height:1.2;color:#10213f;white-space:nowrap}
-.dash-stat small{display:block;color:#8491a6;font-size:10px;margin-top:5px}
-.income-stat .dash-stat-icon{background:#def8e9;color:#0aaf71}.expense-stat .dash-stat-icon{background:#ffe8ec;color:#ed4660}.saving-stat .dash-stat-icon{background:#e3f0ff;color:#2479e8}.task-stat .dash-stat-icon{background:#f1e8ff;color:#8a43ed}
-.dash-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(300px,.9fr);gap:15px}
-.dash-panel{min-width:0;padding:19px}
-.panel-subtitle{font-size:11px;color:#8996aa;margin:4px 0 0}
-.text-action{border:0;background:transparent;color:#1269d7;font-size:12px;font-weight:750;white-space:nowrap;padding:5px 0}
-.chart-legend{display:flex;gap:17px;justify-content:flex-end;font-size:11px;color:#5e6f89;margin:7px 0 5px}
-.chart-legend span{display:flex;align-items:center;gap:6px}.chart-legend i{display:inline-block;width:8px;height:8px;border-radius:50%}
-.legend-income{background:#17c98b}.legend-expense{background:#ff6274}
-.finance-chart{height:165px;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:13px;align-items:end;padding:12px 4px 0;border-bottom:1px solid #e7edf5;background:repeating-linear-gradient(to top,transparent 0,transparent 39px,#edf1f7 40px)}
-.chart-month{height:100%;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;gap:7px;min-width:0}
-.chart-bars{height:calc(100% - 20px);width:100%;display:flex;align-items:flex-end;justify-content:center;gap:4px}
-.chart-bars span{width:min(16px,35%);min-height:3px;border-radius:4px 4px 0 0;transition:height .3s}
-.bar-income{background:linear-gradient(180deg,#38d9a0,#0bb981)}.bar-expense{background:linear-gradient(180deg,#ff9ba7,#ff6376)}
-.chart-month small{font-size:10px;color:#71809a}
-.chart-foot{display:flex;align-items:center;gap:10px;margin-top:14px;color:#71809a;font-size:11px}.chart-foot strong{color:#10213f;font-size:14px}.chart-foot .btn{margin-left:auto;padding:8px 10px;font-size:11px}
-.members-strip{display:flex;gap:10px;flex-wrap:wrap;margin:15px 0 16px}
-.member-chip{display:flex;flex-direction:column;align-items:center;gap:4px;min-width:54px;flex:1}
-.member-avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#e3f2ff,#d5f8eb);color:#164d79;font-weight:800;font-size:16px}
-.member-chip strong{font-size:10px;color:#223957;text-align:center}.member-chip small{font-size:9px;color:#8a97aa}
-.panel-divider{height:1px;background:#edf1f7;margin:14px 0 16px}
-.dash-goal{margin:13px 0 16px}.dash-goal .goalrow{display:flex;justify-content:space-between;gap:8px;font-size:12px}.dash-goal .goalrow strong{color:#263b59}.dash-goal .goalrow b{color:#0aa775}
-.progress{height:8px;background:#edf2f8;border-radius:20px;overflow:hidden;margin:8px 0}.progress span{display:block;height:100%;border-radius:20px;background:linear-gradient(90deg,#0bb981,#55dbac)}
-.dash-list{display:flex;flex-direction:column}
-.dash-row{display:flex;align-items:center;gap:10px;padding:12px 0;border-bottom:1px solid #edf1f7;min-width:0}
-.dash-row:last-child{border-bottom:0}.task-check{width:25px;height:25px;border:1.5px solid #d1dbea;border-radius:8px;display:grid;place-items:center;color:#0bb981;flex-shrink:0}
-.dash-row-main{min-width:0;flex:1}.dash-row-main strong{display:block;font-size:12px;color:#253a58;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.dash-row-main small{display:block;font-size:10px;color:#8a97aa;margin-top:4px}
-.event-icon{width:32px;height:32px;border-radius:10px;background:#e8f3ff;color:#2879d8;display:grid;place-items:center;flex-shrink:0}
-.dash-empty{font-size:12px;color:#8492a8;text-align:center;padding:19px 8px;background:#f8fafd;border-radius:12px;line-height:1.6}
-.quick-actions{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}.quick-actions .btn{font-size:11px;padding:8px 10px}
-.dashboard-bottom{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:15px;padding:14px 18px;border:1px solid #e5ebf4;background:#fff;border-radius:16px}
-.dash-note{display:flex;align-items:center;gap:12px}.note-icon{width:36px;height:36px;border-radius:12px;background:#fff2d9;color:#d28a12;display:grid;place-items:center;font-size:18px}
-.dash-note strong{font-size:12px;color:#263b59}.dash-note p{margin:3px 0 0;color:#8794a8;font-size:11px}
-@media(max-width:1150px){.layout{grid-template-columns:190px minmax(0,1fr);padding:16px;gap:14px}.dash-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.dash-grid{grid-template-columns:1fr 1fr}.dash-stat strong{font-size:21px}}
-@media(max-width:760px){.top{padding:14px 16px;border-radius:0 0 18px 18px}.toprow{gap:8px}.logo{width:41px;height:41px}h1{font-size:19px}.pill{font-size:10px;padding:7px 9px}.layout{display:block;padding:14px 12px 90px}.side{display:none}.pagehead h2{font-size:23px}.pagehead{align-items:flex-start}.pagehead .btn{font-size:11px;padding:9px 10px}.welcome-strip{padding:20px 17px;min-height:125px}.welcome-strip h3{font-size:20px}.welcome-strip p{font-size:12px;max-width:220px}.welcome-date{padding-left:13px;min-width:72px}.welcome-date strong{font-size:34px}.dash-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.dash-stat{padding:13px 10px;gap:9px;border-radius:14px}.dash-stat-icon{width:38px;height:38px;font-size:19px;border-radius:12px}.dash-stat strong{font-size:18px}.dash-stat span{font-size:10px}.dash-stat small{font-size:9px}.dash-grid{grid-template-columns:1fr;gap:12px}.dash-panel{padding:15px}.finance-chart{height:145px;gap:6px}.chart-foot{flex-wrap:wrap}.chart-foot .btn{margin-left:auto}.dashboard-bottom{align-items:flex-start;flex-direction:column}.dashboard-bottom>.btn{width:100%}.bottomnav{position:fixed;left:8px;right:8px;bottom:7px;z-index:15;background:#fff;border:1px solid #e3eaf3;box-shadow:0 8px 28px #071d4020}.footer{padding-bottom:90px}}
-@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+/* Mi Hogar 360 v1.3 — rediseño aplicado al código funcional original */
+:root{--navy:#08234a;--navy2:#102f5b;--teal:#12b886;--bg:#f2f6fb;--ink:#102344;--muted:#697b94;--line:#e3eaf3;--shadow:0 4px 18px rgba(17,42,77,.06)}
+body{background:var(--bg);color:var(--ink)}
+.app{max-width:none;min-height:100vh}
+.top{position:fixed;z-index:6;left:0;top:0;bottom:0;width:246px;border-radius:0;padding:24px 13px;background:linear-gradient(180deg,#09234a,#071b39);display:block}
+.toprow{display:block}
+.brand{gap:12px;margin:0 0 36px 7px;align-items:center}
+.logo{width:48px;height:48px;border-radius:14px;background:#12b886;color:white;font-size:15px}
+h1{font-size:21px;color:#fff;letter-spacing:-.6px}
+.top .sub{font-size:11px;color:#b8c9e2}
+.top .pill{display:none}
+.layout{display:block;margin-left:246px;padding:18px 22px 28px}
+.side{position:fixed;z-index:7;left:0;top:111px;bottom:0;width:246px;padding:0 13px 20px;background:linear-gradient(180deg,#09234a,#071b39);overflow-y:auto}
+.nav{color:#b8c9e2;padding:12px 13px;border-radius:10px;font-weight:600;gap:13px}
+.nav.active,.nav:hover{background:linear-gradient(90deg,#1683f8,#0962d8);color:#fff}
+.nav .ico{font-size:20px;width:24px}
+.main{min-width:0;max-width:1800px;margin:0 auto}
+.pagehead{margin:3px 0 18px}
+.pagehead h2{font-size:27px;font-weight:800;color:#102344}
+.card,.panel{border-radius:17px;border-color:#e5ebf3;box-shadow:0 3px 12px rgba(13,39,75,.035);padding:18px}
+.cards{gap:12px}
+.statlabel{font-size:12px;color:#5e718c}
+.stat{font-size:25px;color:#0e2448}
+.staticon{width:42px;height:42px;border-radius:13px;background:#e3f8ef;color:#07875c;font-size:19px}
+.btn{border-radius:10px}
+.btn.teal{background:#11b98b;color:#063f39}
+.section{margin-top:14px}
+.sectiontitle h3{font-size:17px;font-weight:800}
+.bottomnav{display:none!important}
+.footer{margin-left:246px;padding-bottom:20px}
+.homebanner{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:142px;padding:25px 30px;margin:0 0 14px;border-radius:17px;color:#fff;background:linear-gradient(100deg,#0b2852 0%,#173d70 55%,#0b2852 100%);position:relative;overflow:hidden}
+.homebanner:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 72% 40%,rgba(255,255,255,.12),transparent 45%);pointer-events:none}
+.homebanner h2{font-size:29px;letter-spacing:-.7px;margin:0 0 5px;color:white}
+.homebanner p{margin:0;color:#d8e6f8;font-size:15px}
+.home-date{text-align:center;min-width:105px;border-left:1px solid #ffffff45;padding-left:22px}
+.home-date strong{display:block;font-size:37px;line-height:1.1}
+.home-date small{color:#d8e6f8}
+.homegrid{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.9fr);gap:14px;align-items:start}
+.home-left,.home-right{display:flex;flex-direction:column;gap:14px;min-width:0}
+.home-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:14px}
+.home-stat{padding:15px;border-radius:15px;border:1px solid #e2eaf2;background:white;min-width:0}
+.home-stat.green{background:linear-gradient(135deg,#f0fff6,#fff);border-color:#d8f2e3}
+.home-stat.red{background:linear-gradient(135deg,#fff3f4,#fff);border-color:#f8dfe2}
+.home-stat.blue{background:linear-gradient(135deg,#eff7ff,#fff);border-color:#dbeafe}
+.home-stat.purple{background:linear-gradient(135deg,#f7f1ff,#fff);border-color:#e9ddff}
+.home-stat .statlabel{font-size:11px}
+.home-stat .stat{font-size:23px;margin:5px 0}
+.home-stat .staticon{float:left;margin-right:10px;width:38px;height:38px}
+.home-stat .statnote{clear:both;padding-top:6px}
+.home-chart{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(230px,.9fr);gap:14px}
+.chart-bars{display:flex;align-items:end;gap:9px;height:175px;padding:18px 4px 0;border-bottom:1px solid var(--line);background:repeating-linear-gradient(to bottom,transparent 0,transparent 42px,#edf1f6 43px,#edf1f6 44px)}
+.chart-month{flex:1;min-width:0;height:100%;display:flex;align-items:end;justify-content:center;gap:3px;position:relative}
+.chart-bar{width:28%;max-width:15px;min-height:3px;border-radius:4px 4px 0 0;background:#29c997}
+.chart-bar.out{background:#ff6975}
+.chart-labels{display:flex;justify-content:space-around;color:var(--muted);font-size:10px;padding-top:7px}
+.donut-wrap{display:flex;align-items:center;gap:15px;min-height:185px}
+.donut{width:128px;height:128px;border-radius:50%;background:conic-gradient(#4c9aff 0 28%,#26c995 28% 48%,#8b5cf6 48% 63%,#f6b84b 63% 78%,#fb7b8d 78% 90%,#d5e1ef 90%);position:relative;flex-shrink:0}
+.donut:after{content:"";position:absolute;inset:27px;background:white;border-radius:50%}
+.donut-center{position:absolute;z-index:1;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;font-size:11px;color:var(--muted)}
+.donut-center strong{font-size:17px;color:var(--ink)}
+.legend{display:flex;flex-direction:column;gap:8px;min-width:0;font-size:11px}
+.legend span{display:flex;align-items:center;gap:7px}
+.legend i{display:inline-block;width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.member-strip{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-top:12px}
+.member-mini{text-align:center;min-width:0;padding:8px 2px;border-radius:12px;background:#f7f9fc}
+.member-avatar{width:38px;height:38px;margin:0 auto 5px;border-radius:50%;display:grid;place-items:center;background:#e4eefb;font-size:19px}
+.member-mini strong{display:block;font-size:11px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.member-mini small{font-size:10px;color:var(--muted)}
+.home-list .item{gap:9px;padding:10px 0}
+.home-list .dot{width:32px;height:32px;border-radius:10px}
+.home-list .itembody strong{font-size:12px}
+.home-list .itembody small{font-size:10px}
+.home-calendar{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.home-calendar .day{min-height:34px;text-align:center;padding:5px 2px;border:0;background:#f7f9fc;border-radius:7px}
+.home-calendar .day.today{background:#087cf0;color:white;border:0}
+.home-calendar .dayname{padding:5px 0}
+.goal .progress{margin:7px 0}
+.home-bottom{display:grid;grid-template-columns:1.15fr .9fr 1fr;gap:14px;margin-top:14px}
+.quicknote{width:100%;min-height:105px;border:1px solid var(--line);border-radius:10px;padding:11px;resize:vertical}
+.homequote{background:linear-gradient(135deg,#fff6e8,#f4e6d4);display:flex;align-items:center;justify-content:center;text-align:center;font-weight:650;color:#684c30}
+@media(min-width:1400px){.layout{padding:18px 24px}.homegrid{grid-template-columns:minmax(0,1.7fr) minmax(300px,.85fr)}}
+@media(max-width:1150px) and (min-width:851px){.homegrid{grid-template-columns:1fr}.home-right{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.home-chart{grid-template-columns:1fr 1fr}.home-bottom{grid-template-columns:1fr 1fr}.home-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){
+.top{position:relative;width:auto;left:auto;top:auto;bottom:auto;padding:17px 16px 20px;border-radius:0 0 24px 24px;background:linear-gradient(120deg,#102d50,#173c60)}
+.toprow{display:flex;align-items:center;justify-content:space-between}
+.brand{margin:0;gap:10px}
+.logo{width:43px;height:43px}
+.top .pill{display:block;font-size:10px;padding:7px 9px}
+.layout{display:block;margin-left:0;padding:16px 13px 96px}
+.side{display:none}
+.main{margin:0}
+.pagehead h2{font-size:23px}
+.homebanner{min-height:115px;padding:20px;border-radius:15px}
+.homebanner h2{font-size:23px}
+.homebanner p{font-size:13px}
+.home-date{min-width:68px;padding-left:12px}
+.home-date strong{font-size:29px}
+.home-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.home-stat{padding:13px}
+.home-stat .stat{font-size:22px}
+.homegrid{grid-template-columns:1fr}
+.home-right{display:flex}
+.home-chart{grid-template-columns:1fr}
+.chart-bars{height:150px}
+.donut-wrap{justify-content:flex-start}
+.home-bottom{grid-template-columns:1fr}
+.member-strip{grid-template-columns:repeat(5,minmax(0,1fr))}
+.bottomnav{position:fixed!important;display:flex!important;bottom:0;left:0;right:0;background:#ffffffef;backdrop-filter:blur(12px);border-top:1px solid var(--line);padding:7px 3px calc(7px + env(safe-area-inset-bottom));z-index:8;justify-content:space-around}
+.bottomnav button{border:0;background:transparent;color:#687a89;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px;padding:5px 2px;min-width:0}
+.bottomnav button.active{color:#078477;font-weight:800}
+.bottomnav .ico{font-size:18px}
+.footer{margin-left:0;padding-bottom:100px}
+}
+@media(max-width:420px){.homebanner{padding:16px}.homebanner h2{font-size:20px}.home-date{min-width:55px;padding-left:8px}.home-date strong{font-size:25px}.home-date small{font-size:10px}.home-stat .stat{font-size:20px}.home-stat .staticon{float:none;margin:0 0 8px}.member-mini strong{font-size:10px}}
 
 </style>
 </head>
@@ -138,31 +175,51 @@ function memberName(id){return data.members.find(m=>m.id===id)?.name||"Sin asign
 function renderHome(){
 const tx=monthTx(),inc=sum(tx.filter(t=>t.type==="income"),t=>t.amount),out=sum(tx.filter(t=>t.type==="expense"),t=>t.amount),bal=inc-out;
 const pending=data.payments.filter(p=>statusPay(p)!=="paid"),pendingSum=sum(pending,p=>p.amount);
-const goals=data.goals,openTasks=data.tasks.filter(t=>!t.done).sort((a,b)=>(a.due||"").localeCompare(b.due||""));
-const members=data.members||[], events=(data.events||[]).filter(e=>!e.date||e.date>=today()).sort((a,b)=>(a.date||"").localeCompare(b.date||"")).slice(0,4);
-const monthNames=["Ene","Feb","Mar","Abr","May","Jun","Jul","Ago","Sep","Oct","Nov","Dic"];
-const monthly=Array.from({length:6},(_,i)=>{const d=new Date(year,month-5+i,1),key=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}`;const rows=(data.transactions||[]).filter(t=>(t.date||"").startsWith(key));return {label:monthNames[d.getMonth()],income:sum(rows.filter(t=>t.type==="income"),t=>t.amount),expense:sum(rows.filter(t=>t.type==="expense"),t=>t.amount)}});
-const maxBar=Math.max(1,...monthly.flatMap(m=>[m.income,m.expense]));
-const chart=monthly.map(m=>`<div class="chart-month"><div class="chart-bars"><span class="bar-income" style="height:${Math.max(3,m.income/maxBar*100)}%" title="Ingresos ${money(m.income)}"></span><span class="bar-expense" style="height:${Math.max(3,m.expense/maxBar*100)}%" title="Gastos ${money(m.expense)}"></span></div><small>${m.label}</small></div>`).join("");
-const taskList=openTasks.slice(0,5).map((t,i)=>`<div class="dash-row"><span class="task-check">${i===0?"✓":"○"}</span><div class="dash-row-main"><strong>${esc(t.title||t.name||"Tarea familiar")}</strong><small>${esc(t.assignee||t.memberName||"Familia")}</small></div><span class="badge">${t.due?fmtDate(t.due):"Pendiente"}</span></div>`).join("")||empty("Todo al día","Agrega tareas para organizar la semana.");
-const memberList=members.slice(0,5).map((m,i)=>`<div class="member-chip"><span class="member-avatar">${esc((m.name||m.nombre||"F").trim().charAt(0).toUpperCase())}</span><strong>${esc(m.name||m.nombre||"Familiar")}</strong><small>${esc(m.role||m.relation||"Miembro")}</small></div>`).join("")||`<div class="dash-empty">Añade a los miembros de tu hogar desde Familia.</div>`;
-const goalList=goals.slice(0,3).map(g=>{let saved=sum(data.contributions.filter(c=>c.goalId===g.id),c=>c.type==="withdraw"?-c.amount:c.amount);let pct=g.target?Math.min(100,Math.max(0,saved/g.target*100)):0;return `<div class="dash-goal"><div class="goalrow"><strong>${esc(g.name)}</strong><b>${Math.round(pct)}%</b></div><div class="progress"><span style="width:${pct}%"></span></div><div class="goalrow small muted"><span>${money(saved)}</span><span>${money(g.target)}</span></div></div>`}).join("")||`<div class="dash-empty">Crea una meta y sigue su progreso aquí.</div>`;
-const eventList=events.map(e=>`<div class="dash-row"><span class="event-icon">✦</span><div class="dash-row-main"><strong>${esc(e.title||e.name||"Evento familiar")}</strong><small>${fmtDate(e.date)}${e.time?" · "+esc(e.time):""}</small></div></div>`).join("")||`<div class="dash-empty">No hay eventos próximos. Usa el calendario para planificar.</div>`;
-return `${heading("Tu hogar, en equilibrio","Un vistazo a las finanzas y la organización de tu familia.",`<button class="btn teal" data-modal="transaction">＋ Registrar movimiento</button>`)}
-<section class="welcome-strip"><div><span class="eyebrow">RESUMEN DEL HOGAR</span><h3>Pequeños pasos, grandes logros.</h3><p>Organiza hoy lo que importa mañana.</p></div><div class="welcome-date"><span>${new Date().toLocaleDateString("es-SV",{weekday:"long"})}</span><strong>${new Date().getDate()}</strong><span>${new Date().toLocaleDateString("es-SV",{month:"long",year:"numeric"})}</span></div></section>
-<div class="dash-stats">
-<div class="dash-stat income-stat"><div class="dash-stat-icon">↙</div><div><span>Ingresos del mes</span><strong>${money(inc)}</strong><small>Entradas registradas</small></div></div>
-<div class="dash-stat expense-stat"><div class="dash-stat-icon">↗</div><div><span>Gastos del mes</span><strong>${money(out)}</strong><small>Salidas registradas</small></div></div>
-<div class="dash-stat saving-stat"><div class="dash-stat-icon">◈</div><div><span>Saldo del mes</span><strong>${money(bal)}</strong><small>Ingresos menos gastos</small></div></div>
-<div class="dash-stat task-stat"><div class="dash-stat-icon">✓</div><div><span>Tareas pendientes</span><strong>${openTasks.length}</strong><small>Por completar</small></div></div>
+const next=[...pending].sort((a,b)=>a.due.localeCompare(b.due)).slice(0,4);
+const goals=data.goals,openTasks=data.tasks.filter(t=>!t.done).sort((a,b)=>(a.due||"").localeCompare(b.due||"")).slice(0,5);
+const events=data.tasks.filter(t=>t.kind==="event"&&!t.done&&t.due).sort((a,b)=>a.due.localeCompare(b.due)).slice(0,4);
+const lastMonths=Array.from({length:6},(_,i)=>{const d=new Date(year,month-5+i,1),prefix=`${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,"0")}`,items=data.transactions.filter(t=>t.date?.startsWith(prefix));return {label:d.toLocaleDateString("es-SV",{month:"short"}).replace(".",""),income:sum(items.filter(t=>t.type==="income"),t=>t.amount),expense:sum(items.filter(t=>t.type==="expense"),t=>t.amount)}});
+const maxChart=Math.max(1,...lastMonths.flatMap(x=>[x.income,x.expense]));
+const bars=lastMonths.map(x=>`<div class="chart-month" title="${x.label}: ingresos ${money(x.income)}, gastos ${money(x.expense)}"><span class="chart-bar" style="height:${Math.max(3,x.income/maxChart*100)}%"></span><span class="chart-bar out" style="height:${Math.max(3,x.expense/maxChart*100)}%"></span></div>`).join("");
+const labels=lastMonths.map(x=>`<span>${esc(x.label)}</span>`).join("");
+const categoryTotals=cats.map(c=>({name:c,value:sum(tx.filter(t=>t.type==="expense"&&(t.category||"Otros")===c),t=>t.amount)})).filter(c=>c.value>0).sort((a,b)=>b.value-a.value).slice(0,5);
+const catColors=["#4c9aff","#26c995","#8b5cf6","#f6b84b","#fb7b8d"];
+const catTotal=sum(categoryTotals,c=>c.value);
+let deg=0;const conic=categoryTotals.map((c,i)=>{const start=deg;deg+=catTotal?c.value/catTotal*360:0;return `${catColors[i]} ${start}deg ${deg}deg`}).join(",");
+const legend=categoryTotals.length?categoryTotals.map((c,i)=>`<span><i style="background:${catColors[i]}"></i><span style="flex:1">${esc(c.name)}</span><b>${catTotal?Math.round(c.value/catTotal*100):0}%</b></span>`).join(""):`<span class="muted">Registra gastos para ver categorías</span>`;
+const memberIcons=["👨🏻","👩🏻","🧑🏻","👦🏻","👧🏻"];
+const members=data.members.slice(0,5);
+const memberBlock=members.length?members.map((m,i)=>`<div class="member-mini"><div class="member-avatar">${memberIcons[i%memberIcons.length]}</div><strong>${esc(m.name)}</strong><small>${esc(m.role||"Familia")}</small></div>`).join(""):`<div class="empty" style="grid-column:1/-1;padding:15px">Agrega a los miembros de tu hogar en Familia.</div>`;
+const goalBlock=goals.length?goals.slice(0,3).map(g=>{let saved=sum(data.contributions.filter(c=>c.goalId===g.id),c=>c.type==="withdraw"?-c.amount:c.amount);let pct=g.target?Math.min(100,Math.max(0,saved/g.target*100)):0;return `<div class="goal"><div class="goalrow"><strong>${esc(g.name)}</strong><b class="small">${Math.round(pct)}%</b></div><div class="goalrow small muted"><span>${money(saved)} / ${money(g.target)}</span></div><div class="progress"><span style="width:${pct}%"></span></div></div>`}).join(""):empty("Todavía no tienes metas","Crea una meta para empezar a ahorrar.");
+const taskBlock=openTasks.length?`<div class="list home-list">${openTasks.map(t=>`<div class="item"><input class="check" type="checkbox" data-task-toggle="${t.id}" ${t.done?"checked":""}><div class="itembody"><strong>${esc(t.title)}</strong><small>${t.due?fmtDate(t.due):"Sin fecha"}${t.assignee?` · ${esc(memberName(t.assignee))}`:""}</small></div></div>`).join("")}</div>`:empty("Todo despejado","Agrega una tarea familiar.");
+const payBlock=next.length?paymentRows(next):empty("No hay pagos aquí","Agrega un pago para empezar a organizarte.");
+const eventBlock=events.length?`<div class="list home-list">${events.map(e=>`<div class="item"><div class="dot">📅</div><div class="itembody"><strong>${esc(e.title)}</strong><small>${fmtDate(e.due)}${e.assignee?` · ${esc(memberName(e.assignee))}`:""}</small></div></div>`).join("")}</div>`:empty("Sin próximos eventos","Agrega eventos en Calendario o Familia.");
+return `<section class="homebanner"><div><h2>Buenos días 👋</h2><p>Tu hogar en orden, tu familia más unida</p><button class="btn teal" data-modal="transaction" style="margin-top:12px">＋ Movimiento</button></div><div class="home-date"><small>${new Date().toLocaleDateString("es-SV",{weekday:"long"})}</small><strong>${new Date().getDate()}</strong><small>${new Date().toLocaleDateString("es-SV",{month:"long",year:"numeric"})}</small></div></section>
+<div class="home-stats">
+<div class="home-stat green"><span class="staticon">↙</span><div class="statlabel">Ingresos del mes</div><div class="stat">${money(inc)}</div><div class="statnote">Ingresos registrados</div></div>
+<div class="home-stat red"><span class="staticon" style="background:#ffe3e7;color:#d83248">↗</span><div class="statlabel">Gastos del mes</div><div class="stat">${money(out)}</div><div class="statnote">Gastos registrados</div></div>
+<div class="home-stat blue"><span class="staticon" style="background:#e1efff;color:#2878e5">◉</span><div class="statlabel">Saldo del mes</div><div class="stat">${money(bal)}</div><div class="statnote">Ingresos menos gastos</div></div>
+<div class="home-stat purple"><span class="staticon" style="background:#efe5ff;color:#8150e8">✓</span><div class="statlabel">Tareas pendientes</div><div class="stat">${openTasks.length}</div><div class="statnote">Por completar</div></div>
 </div>
-<div class="dash-grid">
-<section class="panel dash-panel dash-chart-panel"><div class="sectiontitle"><div><h3>Resumen financiero</h3><p class="panel-subtitle">Actividad de los últimos seis meses</p></div><span class="badge">USD</span></div><div class="chart-legend"><span><i class="legend-income"></i> Ingresos</span><span><i class="legend-expense"></i> Gastos</span></div><div class="finance-chart">${chart}</div><div class="chart-foot"><span>Pagos pendientes</span><strong>${money(pendingSum)}</strong><button class="btn light" data-page="reports">Ver informes →</button></div></section>
-<section class="panel dash-panel"><div class="sectiontitle"><div><h3>Mi familia</h3><p class="panel-subtitle">Tu equipo en casa</p></div><button class="text-action" data-page="family">Ver todos →</button></div><div class="members-strip">${memberList}</div><div class="panel-divider"></div><div class="sectiontitle"><h3>Metas de ahorro</h3><button class="text-action" data-page="goals">Ver metas →</button></div>${goalList}</section>
-<section class="panel dash-panel"><div class="sectiontitle"><div><h3>Tareas pendientes</h3><p class="panel-subtitle">Lo próximo por hacer</p></div><button class="text-action" data-page="family">Organizar →</button></div><div class="dash-list">${taskList}</div></section>
-<section class="panel dash-panel"><div class="sectiontitle"><div><h3>Próximos eventos</h3><p class="panel-subtitle">Momentos importantes</p></div><button class="text-action" data-page="calendar">Calendario →</button></div><div class="dash-list">${eventList}</div><div class="quick-actions"><button class="btn light" data-page="calendar">＋ Evento</button><button class="btn light" data-page="budget">＋ Presupuesto</button></div></section>
+<div class="homegrid"><div class="home-left">
+<div class="home-chart">
+<section class="panel"><div class="sectiontitle"><h3>Resumen financiero</h3><span class="badge">Últimos 6 meses</span></div><div class="rowwrap small muted" style="gap:14px;margin:6px 0 0"><span>🟢 Ingresos</span><span>🔴 Gastos</span></div><div class="chart-bars">${bars}</div><div class="chart-labels">${labels}</div></section>
+<section class="panel"><div class="sectiontitle"><h3>Gastos por categoría</h3><button class="btn light" data-page="budget">Ver gastos</button></div><div class="donut-wrap"><div class="donut" style="background:conic-gradient(${conic||"#dce6f0 0 360deg"})"><div class="donut-center"><span>Total</span><strong>${money(catTotal)}</strong></div></div><div class="legend">${legend}</div></div></section>
 </div>
-<div class="dashboard-bottom"><div class="dash-note"><span class="note-icon">✦</span><div><strong>Un hogar organizado, una familia más tranquila.</strong><p>Dedica unos minutos hoy para planificar mejor la semana.</p></div></div><button class="btn" data-page="settings">Revisar sincronización y respaldo</button></div>`;
+<div class="home-chart">
+<section class="panel"><div class="sectiontitle"><h3>Calendario familiar</h3><button class="btn light" data-page="calendar">Ver calendario</button></div><div class="home-calendar">${["L","M","M","J","V","S","D"].map(x=>`<div class="dayname">${x}</div>`).join("")}${(()=>{const first=new Date(year,month,1),last=new Date(year,month+1,0),offset=(first.getDay()+6)%7;let s="";for(let i=0;i<offset;i++)s+='<div class="day dim"></div>';for(let d=1;d<=last.getDate();d++){let ds=`${year}-${String(month+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`;s+=`<div class="day ${ds===today()?"today":""}">${d}</div>`}while((offset+last.getDate())%7)s+='<div class="day dim"></div>';return s})()}</div></section>
+<section class="panel"><div class="sectiontitle"><h3>Próximos eventos</h3><button class="btn light" data-page="calendar">Ver todos</button></div>${eventBlock}</section>
+</div>
+</div>
+<aside class="home-right">
+<section class="panel"><div class="sectiontitle"><h3>Mi familia</h3><button class="btn light" data-page="family">Ver todos</button></div><div class="member-strip">${memberBlock}</div></section>
+<section class="panel"><div class="sectiontitle"><h3>Tareas pendientes</h3><button class="btn light" data-page="family">Ver todas</button></div>${taskBlock}</section>
+<section class="panel"><div class="sectiontitle"><h3>Objetivos de ahorro</h3><button class="btn light" data-page="goals">Ver todos</button></div>${goalBlock}</section>
+<section class="panel"><div class="sectiontitle"><h3>Próximos pagos</h3><button class="btn light" data-page="calendar">Ver calendario</button></div>${payBlock}</section>
+</aside></div>
+<div class="home-bottom"><section class="panel"><div class="sectiontitle"><h3>Actividad reciente</h3><span class="badge">Este mes</span></div>${tx.length?`<div class="list home-list">${tx.slice(-3).reverse().map(t=>`<div class="item"><div class="dot">${t.type==="income"?"↙":"↗"}</div><div class="itembody"><strong>${esc(t.title||t.description|| (t.type==="income"?"Ingreso":"Gasto"))}</strong><small>${fmtDate(t.date)}</small></div><b class="amount">${money(t.amount)}</b></div>`).join("")}</div>`:empty("Sin actividad todavía","Tus movimientos aparecerán aquí.")}</section>
+<section class="panel"><div class="sectiontitle"><h3>Recordatorios</h3><button class="btn light" data-page="calendar">Ver agenda</button></div>${events.length?eventBlock:empty("Todo al día","Los eventos aparecerán aquí.")}</section>
+<section class="panel"><div class="sectiontitle"><h3>Notas rápidas</h3><span class="badge">Local</span></div><textarea class="quicknote" id="quicknote" placeholder="Escribe una nota rápida...">${esc(localStorage.getItem("mihogar360_quicknote")||"")}</textarea><div class="actions"><button class="btn teal" data-save-note>Guardar nota</button></div></section></div>`;
 }
 function renderCalendar(){const first=new Date(year,month,1),last=new Date(year,month+1,0),offset=(first.getDay()+6)%7;let cells="";const payBy={};data.payments.forEach(p=>(payBy[p.due]??=[]).push(p));data.tasks.forEach(t=>{if(t.kind==="event"&&t.due)(payBy[t.due]??=[]).push({...t,amount:0,isEvent:true})});for(let i=0;i<offset;i++)cells+=`<div class="day dim"></div>`;for(let d=1;d<=last.getDate();d++){let ds=`${year}-${String(month+1).padStart(2,"0")}-${String(d).padStart(2,"0")}`,items=payBy[ds]||[];cells+=`<div class="day ${ds===today()?"today":""}"><div class="daynum">${d}</div><div class="daymarks">${items.slice(0,4).map(x=>`<span class="mark ${x.isEvent?"blue":statusPay(x)==="overdue"?"red":""}" title="${esc(x.title)}"></span>`).join("")}</div>${items.length?`<div class="small" style="margin-top:3px">${items.length} elem.</div>`:""}</div>`}while((offset+last.getDate())%7)cells+=`<div class="day dim"></div>`;const upcoming=data.payments.filter(p=>p.due.startsWith(`${year}-${String(month+1).padStart(2,"0")}`)).sort((a,b)=>a.due.localeCompare(b.due));return `${heading("Calendario","Pagos y compromisos del hogar.",`<button class="btn teal" data-modal="payment">＋ Agregar pago</button>`)}<div class="panel"><div class="calendarhead"><button class="btn light" data-month="-1">←</button><strong style="text-transform:capitalize">${monthLabel(year,month)}</strong><button class="btn light" data-month="1">→</button></div><div class="calendar">${["Lun","Mar","Mié","Jue","Vie","Sáb","Dom"].map(x=>`<div class="dayname">${x}</div>`).join("")}${cells}</div><div class="rowwrap small muted" style="margin-top:12px"><span class="mark"></span> Pago <span class="mark red"></span> Vencido <span class="mark blue"></span> Evento</div></div><div class="section panel"><div class="sectiontitle"><h3>Pagos de ${monthLabel(year,month)}</h3><span class="badge">${upcoming.length} registro(s)</span></div>${paymentRows(upcoming)}</div>`}
 function renderBudget(){const tx=monthTx(),inc=sum(tx.filter(t=>t.type==="income"),t=>t.amount),out=sum(tx.filter(t=>t.type==="expense"),t=>t.amount);const catsUsed=[...new Set([...cats,...data.budgets.map(b=>b.category)])];return `${heading("Presupuesto",cloudRole==="member"?"Registra los gastos que tienes autorización de agregar.":"Controla lo que entra y sale.",cloudRole==="member"?(cloudCanAddExpenses?`<button class="btn teal" data-modal="transaction">＋ Gasto</button>`:""):`<button class="btn teal" data-modal="transaction">＋ Movimiento</button>`)}<div class="cards">${stat("Ingresos",money(inc),"↙","Este mes")}${stat("Gastos",money(out),"↗","Este mes")}${stat("Saldo",money(inc-out),"◈","Ingresos menos gastos")}${stat("Movimientos",String(tx.length),"≋","Este mes")}</div><div class="section panel"><div class="sectiontitle"><h3>Movimientos recientes</h3><div class="toolbar"><input id="txsearch" placeholder="Buscar..." value="${esc(filterText)}">${cloudRole==="member"?"":`<button class="btn light" data-modal="budget">＋ Límite</button>`}</div></div>${renderTransactions(filterText)}</div><div class="section panel"><div class="sectiontitle"><h3>Límites por categoría</h3><span class="muted small">${monthLabel(year,month)}</span></div>${catsUsed.map(cat=>{let b=data.budgets.find(x=>x.category===cat&&x.month===`${year}-${String(month+1).padStart(2,"0")}`);let spent=sum(tx.filter(t=>t.type==="expense"&&t.category===cat),t=>t.amount);if(!b&&!spent)return "";let pct=b&&b.limit?Math.min(100,spent/b.limit*100):0;return `<div class="goal"><div class="goalrow"><strong>${esc(cat)}</strong><span class="small">${b?`${money(spent)} / ${money(b.limit)}`:`${money(spent)} · sin límite`}</span></div>${b?`<div class="progress"><span style="width:${pct}%;${pct>=100?"background:var(--red)":""}"></span></div><div class="small ${pct>=100?"":"muted"}">${pct>=100?"Límite alcanzado o superado":`${money(Math.max(0,b.limit-spent))} restantes`}</div>`:""}</div>`}).join("")||empty("Sin límites todavía","Agrega un límite por categoría para controlar el gasto.")}</div><div class="section panel"><div class="sectiontitle"><h3>Gastos por integrante</h3><span class="muted small">${monthLabel(year,month)}</span></div><p class="muted small">Suma los gastos registrados y asociados a cada integrante. Los gastos sin asignar se muestran por separado.</p>${(()=>{const expenses=tx.filter(t=>t.type==="expense");const linked=data.members.map(m=>({m,total:sum(expenses.filter(t=>t.memberId===m.id),t=>t.amount),count:expenses.filter(t=>t.memberId===m.id).length}));const unassigned=expenses.filter(t=>!t.memberId);return `${linked.length?`<div class="list">${linked.map(x=>`<div class="item"><div class="dot">♡</div><div class="itembody"><strong>${esc(x.m.name)}</strong><small>${x.count} gasto(s) asignado(s)</small></div><strong class="amount">${money(x.total)}</strong></div>`).join("")}</div>`:empty("Agrega integrantes","Registra a los miembros de la familia para comparar sus gastos.")}<div class="item"><div class="dot">≋</div><div class="itembody"><strong>Sin asignar</strong><small>${unassigned.length} gasto(s) sin integrante</small></div><strong class="amount">${money(sum(unassigned,t=>t.amount))}</strong></div><div class="notice" style="margin-top:12px"><strong>Total de gastos del mes: ${money(sum(expenses,t=>t.amount))}</strong><br>El total incluye los gastos asignados y los que aún no tienen integrante.</div>`})()}</div>`}
@@ -202,7 +259,7 @@ function exportData(){const payload={app:"Mi Hogar 360",schemaVersion:1,exported
 function importData(file){const r=new FileReader();r.onload=()=>{try{const p=JSON.parse(r.result),d=p.data||p;if(!d||!Array.isArray(d.transactions)||!Array.isArray(d.payments)||!Array.isArray(d.goals)||!Array.isArray(d.members)||!Array.isArray(d.tasks)||!Array.isArray(d.contributions)||!Array.isArray(d.budgets))throw Error("Formato no reconocido");if(!confirm("Importar este respaldo reemplazará los datos actuales de Mi Hogar 360. ¿Continuar?"))return;data={...blank(),...d};if(!save())throw Error("No se pudo guardar");render();toast("Respaldo restaurado correctamente.")}catch(e){alert("No se pudo importar el archivo. Verifica que sea un respaldo válido de Mi Hogar 360.")}};r.readAsText(file)}
 function demo(){if(!confirm("Se agregarán datos de ejemplo a los registros actuales. ¿Continuar?"))return;const monthKey=today().slice(0,7);data.members.push({id:uid(),name:"Ana",role:"Familia"},{id:uid(),name:"Carlos",role:"Familia"});data.transactions.push({id:uid(),type:"income",amount:125000,description:"Ingreso mensual",category:"Otros",date:today()},{id:uid(),type:"expense",amount:28500,description:"Compra de supermercado",category:"Alimentación",date:today(),memberId:""},{id:uid(),type:"expense",amount:12000,description:"Transporte",category:"Transporte",date:today(),memberId:""});data.payments.push({id:uid(),title:"Internet",amount:3000,due:today(),category:"Servicios",recurrence:"monthly",status:"pending",seriesId:uid()},{id:uid(),title:"Electricidad",amount:4500,due:dateAdd(today(),"weekly"),category:"Servicios",recurrence:"once",status:"pending",seriesId:uid()});const gid=uid();data.goals.push({id:gid,name:"Fondo de emergencia",target:50000,due:"",notes:""});data.contributions.push({id:uid(),goalId:gid,type:"deposit",amount:10000,date:today()});data.budgets.push({id:uid(),category:"Alimentación",limit:40000,month:monthKey});data.tasks.push({id:uid(),kind:"task",title:"Preparar lista de compras",due:today(),assignee:data.members[0].id,priority:"normal",done:false},{id:uid(),kind:"event",title:"Actividad familiar",due:dateAdd(today(),"weekly"),assignee:"",priority:"normal",done:false});save();render();toast("Datos de ejemplo agregados.")}
 function deleteItem(arr,id){const i=arr.findIndex(x=>x.id===id);if(i<0)return;arr.splice(i,1);save();render()}
-document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;if(b.dataset.page){page=b.dataset.page;render();return}if(b.dataset.modal){openModal(b.dataset.modal);return}if(b.dataset.month){month+=Number(b.dataset.month);if(month<0){month=11;year--}if(month>11){month=0;year++}render();return}if(b.dataset.pay){markPaid(b.dataset.pay);return}if(b.dataset.unpay){unpay(b.dataset.unpay);return}if(b.dataset.editPayment){openModal("payment",b.dataset.editPayment);return}if(b.dataset.editTx){openModal("transaction",b.dataset.editTx);return}if(b.dataset.editGoal){openModal("goal",b.dataset.editGoal);return}if(b.dataset.editMember){openModal("member",b.dataset.editMember);return}if(b.dataset.editTask){openModal("task",b.dataset.editTask);return}if(b.dataset.contribute){const g=data.goals.find(x=>x.id===b.dataset.contribute);openModal("contribution",null,g);return}if(b.dataset.deleteTx){if(confirm("¿Eliminar este movimiento?"))deleteItem(data.transactions,b.dataset.deleteTx);return}if(b.dataset.deleteGoal){if(confirm("¿Eliminar esta meta y sus aportaciones?")){data.contributions=data.contributions.filter(c=>c.goalId!==b.dataset.deleteGoal);deleteItem(data.goals,b.dataset.deleteGoal)}return}if(b.dataset.deleteMember){const id=b.dataset.deleteMember;if(confirm("¿Eliminar este integrante? Las tareas existentes conservarán el registro, pero podrían quedar sin responsable.")){data.members=data.members.filter(m=>m.id!==id);data.tasks.forEach(t=>{if(t.assignee===id)t.assignee=""});save();render()}return}if(b.dataset.deleteTask){if(confirm("¿Eliminar esta tarea o evento?"))deleteItem(data.tasks,b.dataset.deleteTask);return}if(b.hasAttribute("data-export")){exportData();return}if(b.hasAttribute("data-export-csv")){exportCSV();return}if(b.hasAttribute("data-cloud-disconnect")){disconnectCloud();return}if(b.dataset.auth){authAction(b.dataset.auth);return}if(b.hasAttribute("data-house-create")){createHousehold();return}if(b.hasAttribute("data-house-join")){joinHousehold();return}if(b.hasAttribute("data-house-invite")){createInvite();return}if(b.hasAttribute("data-import")){document.getElementById("importfile").click();return}if(b.hasAttribute("data-demo")){demo();return}if(b.hasAttribute("data-clear")){if(confirm("Esto eliminará todos los datos guardados en este navegador. Exporta un respaldo antes. ¿Continuar?")){data=blank();save();render();toast("Datos eliminados.")}return}});
+document.addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;if(b.hasAttribute("data-save-note")){const n=document.getElementById("quicknote");if(n){localStorage.setItem("mihogar360_quicknote",n.value);toast("Nota guardada en este dispositivo.")}return}if(b.dataset.page){page=b.dataset.page;render();return}if(b.dataset.modal){openModal(b.dataset.modal);return}if(b.dataset.month){month+=Number(b.dataset.month);if(month<0){month=11;year--}if(month>11){month=0;year++}render();return}if(b.dataset.pay){markPaid(b.dataset.pay);return}if(b.dataset.unpay){unpay(b.dataset.unpay);return}if(b.dataset.editPayment){openModal("payment",b.dataset.editPayment);return}if(b.dataset.editTx){openModal("transaction",b.dataset.editTx);return}if(b.dataset.editGoal){openModal("goal",b.dataset.editGoal);return}if(b.dataset.editMember){openModal("member",b.dataset.editMember);return}if(b.dataset.editTask){openModal("task",b.dataset.editTask);return}if(b.dataset.contribute){const g=data.goals.find(x=>x.id===b.dataset.contribute);openModal("contribution",null,g);return}if(b.dataset.deleteTx){if(confirm("¿Eliminar este movimiento?"))deleteItem(data.transactions,b.dataset.deleteTx);return}if(b.dataset.deleteGoal){if(confirm("¿Eliminar esta meta y sus aportaciones?")){data.contributions=data.contributions.filter(c=>c.goalId!==b.dataset.deleteGoal);deleteItem(data.goals,b.dataset.deleteGoal)}return}if(b.dataset.deleteMember){const id=b.dataset.deleteMember;if(confirm("¿Eliminar este integrante? Las tareas existentes conservarán el registro, pero podrían quedar sin responsable.")){data.members=data.members.filter(m=>m.id!==id);data.tasks.forEach(t=>{if(t.assignee===id)t.assignee=""});save();render()}return}if(b.dataset.deleteTask){if(confirm("¿Eliminar esta tarea o evento?"))deleteItem(data.tasks,b.dataset.deleteTask);return}if(b.hasAttribute("data-export")){exportData();return}if(b.hasAttribute("data-export-csv")){exportCSV();return}if(b.hasAttribute("data-cloud-disconnect")){disconnectCloud();return}if(b.dataset.auth){authAction(b.dataset.auth);return}if(b.hasAttribute("data-house-create")){createHousehold();return}if(b.hasAttribute("data-house-join")){joinHousehold();return}if(b.hasAttribute("data-house-invite")){createInvite();return}if(b.hasAttribute("data-import")){document.getElementById("importfile").click();return}if(b.hasAttribute("data-demo")){demo();return}if(b.hasAttribute("data-clear")){if(confirm("Esto eliminará todos los datos guardados en este navegador. Exporta un respaldo antes. ¿Continuar?")){data=blank();save();render();toast("Datos eliminados.")}return}});
 document.addEventListener("submit",e=>{if(e.target.id==="cloudconfigform"){e.preventDefault();const v=Object.fromEntries(new FormData(e.target).entries());localStorage.setItem(CLOUDCFG,JSON.stringify({url:v.supabaseUrl.trim().replace(/\/$/,""),key:v.supabaseKey.trim()}));initCloud(true);return}if(e.target.id==="authform"){e.preventDefault();authAction(e.submitter?.dataset.auth||"login",Object.fromEntries(new FormData(e.target).entries()));return}});
 document.addEventListener("change",e=>{const el=e.target;if(el.dataset.taskToggle){const t=data.tasks.find(x=>x.id===el.dataset.taskToggle);if(t){t.done=el.checked;save();render()}return}if(el.id==="importfile"&&el.files?.[0])importData(el.files[0])});
 function getCloudConfig(){try{return JSON.parse(localStorage.getItem(CLOUDCFG)||"{}")}catch(e){return {}}}
