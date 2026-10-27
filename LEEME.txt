@@ -22,3 +22,6 @@ SEGURIDAD / ALCANCE
 - La app todavía no cobra suscripciones ni verifica pagos. El modo gratuito/Premium está planificado, pero antes de vender Premium hay que definir el proveedor de pagos y la validación del plan en servidor.
 - La sincronización requiere conexión a internet. El almacenamiento local sigue disponible, pero las ediciones sin conexión de miembros pueden no sincronizarse si chocan con las restricciones de permisos.
 - La clave pública de Supabase puede estar en el cliente; nunca incluyas claves secretas/service_role.
+
+
+Versión 1.3: renovación visual del panel de inicio, tarjetas, gráficos mensuales derivados de los datos locales, sección familiar, tareas y eventos. Se conserva el esquema de almacenamiento local y la lógica original.
